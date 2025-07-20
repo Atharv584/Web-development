@@ -1,0 +1,151 @@
+.Weather{
+    margin: 0;
+    padding: 0;
+    height: 120px;
+    display: flex;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3em;
+    justify-content: center;
+    background-color: 19C3FB;
+    color: white;
+}
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    background-color: 19C3FB;
+}
+.button{
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 300;
+    font-style: normal;
+    align-items: center;
+    font-size: 1.5em;
+    height: 50px;
+    width: 220px;
+    border-radius: 8px;
+    border: 3px solid gray;
+    color: 19C3FB;
+    background-color: white;
+}
+.right-img {
+    float: right;
+    width: 400px;
+    height: 300px;
+    margin-left: 15px;
+}
+
+.container{
+    display: flex;
+}
+.main{
+    flex:6;
+    padding: 15px;
+    font-size: 13px;
+    height: 395px;
+    /* border: 3px solid black; */
+    font-family: "Press Start 2P", system-ui;
+    font-weight:200;
+    font-style: normal;
+}
+.sidebar{
+    display: flex;
+    flex:1;
+    height: 425px;
+    /* border: 3px solid black; */
+    flex-direction: column;
+    justify-content: space-evenly;  
+    align-items: center;
+    background-color: ffdf64;
+}
+.place{
+    border:6px solid ffdf64;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 300;
+    font-style: normal;
+    padding: 10px;
+    height: 30px;
+    width: 100px;
+    color: rgb(63, 63, 63);
+}
+#place1{
+    background-color: ffdf64;
+}
+#place2{
+    background-color: ffdf64;
+}
+#place3{
+    background-color: ffdf64;
+}
+#place4{
+    background-color: ffdf64;
+}
+#place5{
+    background-color: ffdf64;
+}
+
+.content-box {
+    font-family: "Press Start 2P", system-ui;
+    padding: 20px;
+    color: #333;
+}
+
+.section-title {
+    font-size: 1.5em;
+    color: #19C3FB;
+    margin-bottom: 20px;
+}
+
+.form-style {
+    font-size: 0.7em;
+    line-height: 2;
+}
+
+.input-box {
+    width: 90%;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 0.9em;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #19C3FB;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #148ac2;
+}
+
+.para-text {
+    font-size: 0.75em;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.catalog-list {
+    font-size: 0.7em;
+    padding-left: 20px;
+    line-height: 2;
+}
+
+.cloud-icon {
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+    align-self: center;
+}
+
