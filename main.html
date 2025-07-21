@@ -1,0 +1,57 @@
+<!-- <!DOCTYPE html> -->
+<!-- <html lang="en"> -->
+<head>
+    <!-- <meta charset="UTF-8"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Student Information</title>
+</head>
+<body>
+    <h1>Student info</h1>
+    <button onclick="load()">Load</button>
+    <ul id="st_list"></ul>
+    
+    <script id="student_data" type="text/xml">
+        <students>
+            <student>
+                <id>001</id>
+                <name>abc</name>
+                <age>18</age>
+                <major>AIML</major>
+            </student>
+            <student>
+                <id>002</id>
+                <name>pqr</name>
+                <age>19</age>
+                <major>DS</major>
+            </student>
+            <student>
+                <id>003</id>
+                <name>xyz</name>
+                <age>19</age>
+                <major>CS</major>
+            </student>
+        </students>    
+    </script>
+
+    <script>
+        function load(){
+            var xmlData = document.getElementById("student_data").textContent;
+            var parser = new DOMParser();
+            var xmlDoc = parser.parseFromString(xmlData,"text/xml");
+            var students = xmlDoc.getElementsByTagName("student");
+            var list = document.getElementById("st_list");
+            list.innerHTML = "";
+
+            for(var i=0;i<students.length;i++){
+            var li = document.createElement("li");
+            var id = students[i].getElementsByTagName("id")[0].childNodes[0].nodeValue;
+            var name = students[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+            var age = students[i].getElementsByTagName("age")[0].childNodes[0].nodeValue;
+            var major = students[i].getElementsByTagName("major")[0].childNodes[0].nodeValue;
+            li.textContent = "ID: " + id + "  Name: " + name + "  Age: " + age + "  Major: " + major;
+            list.appendChild(li);
+        }
+    }
+    </script>
+</body>
+</html>
