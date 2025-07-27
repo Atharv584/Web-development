@@ -1,0 +1,106 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+}
+.container{
+  height: 120vh;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+}
+.head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 150px;
+  background-color: #4a2511;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+}
+.home{
+  font-size: 1.3em;
+  font-family: "Playfair Display", serif;
+  width: 125px;
+  height: 75px;
+  color: rgb(232,214,202);
+  background-color: #9A7B4F;
+  border-radius: 0.8em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.title {
+    align-items: center;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 2em;
+    color: rgb(232, 214, 202);
+    margin: 0;
+}
+
+
+.bottom{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    border-radius: 1em;
+    background-color: rgb(232, 214, 202);   
+    display: flex;
+    width: 1290px;
+    height: 600px;
+    padding: 30px;
+    margin: 30px;
+}
+.content{
+    display: flex;
+    /* background-color: brown; */
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 1em;
+    flex-direction: row;
+    height: 50px;
+    width: 1200px;
+}
+.title_bottom{
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    display: flex;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.textt{
+    font-family: "Playfair Display", serif;
+    height: 30px;
+    font-size: 1.2em; 
+    padding:0px;
+    width: 500px;
+    align-items: left;
+}
+
+.downbutton{
+    justify-content: center;
+    display: flex;
+    align-items: right;
+    font-size: 1em;
+    font-family: "Playfair Display", serif;
+    height: 30px;
+    width: 300px;
+    color: rgb(232,214,202);
+    background-color: #9A7B4F;
+    border-radius: 0.8em;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.confirmation {
+  color: green;
+  font-size: 1.5em;
+  padding: 15px;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  background-color: #e6f4e6; /* light green background (optional) */
+  border-radius: 0.5em;
+  margin-top: 20px;
+}

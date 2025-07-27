@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coffee Shop</title>
+  <!-- font star2p -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <div class="title"><h2>Buy whatever you like !</h2></div>
+            <div class="hom"><button class="home"onclick="window.location.href='index.html'">Home</button></div>
+        </div>
+        <div class="bottom">
+            <div class="title_bottom">Place your order</div>
+            <div class="content">
+                <p class="textt">Chocolate Cake</p>
+                <button class="downbutton" onclick="appendSpecificItem('Chocolate Cake')">Place Order</button>
+            </div>
+            <div class="content">
+                <p class="textt">Brownies</p>  
+                <button class="downbutton" onclick="appendSpecificItem('Brownies')">Place Order</button>
+            </div>
+            <div class="content">
+                <p class="textt">CheeseCakes</p>  
+                <button class="downbutton" onclick="appendSpecificItem('CheeseCakes')">Place Order</button>
+            </div>
+            <div class="content">
+                <p class="textt">Espresso</p>  
+                <button class="downbutton" onclick="appendSpecificItem('Espresso')">Place Order</button>
+            </div>
+            <div class="content">
+                <p class="textt">Mocha</p>  
+                <button class="downbutton" onclick="appendSpecificItem('Mocha')">Place Order</button>
+            </div>
+            <div class="content">
+                <p class="textt">Americano</p>  
+                <button class="downbutton" onclick="appendSpecificItem('Americano')">Place Order</button>
+            </div>
+            <div class="content">
+                <p class="textt">Cappucino</p>  
+                <button class="downbutton" onclick="appendSpecificItem('Cappucino')">Place Order</button>
+            </div>            
+            <div class="end">
+              <p id="confirmation" style="color: green; font-size: 20px;text-align: center;"></p>
+            </div>
+            
+        </div>
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>

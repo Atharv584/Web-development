@@ -1,0 +1,87 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+}
+.container{
+  height: 100vh;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 150px;
+  background-color: #4a2511;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+}
+.title_text{
+    display: flex;
+    font-size: 2em;
+    color: rgb(232,214,202);
+    padding: 15px;
+    font-family: "Press Start 2P", serif;
+}
+.home{
+  font-size: 1.3em;
+  font-family: "Playfair Display", serif;
+  width: 125px;
+  height: 75px;
+  color: rgb(232,214,202);
+  background-color: #9A7B4F;
+  border-radius: 0.8em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.bottom{
+    padding: 40px;
+    margin: 40px;
+    flex-direction: column;
+    display: flex;
+    height: 500px;
+    width: 1280px;
+    background-color: rgb(232,214,202);
+}
+.mytable{
+    height: 200px;
+     font-size: 1.2em;
+    font-family: "Playfair Display", serif;
+}
+.mytable tr {
+  height: 60px; /* set this to whatever height you prefer */
+}
+.mytable td, .mytable th {
+  vertical-align: middle;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+.clearitems {
+  display: flex;
+  justify-content: center;   /* Center horizontally */
+  align-items: center;       /* Center vertically */
+  width: 100%;               /* Full width of parent */
+  margin-top: 20px;
+  height: 100px;             /* Gives it some height so vertical centering works */
+}
+
+.clearitems button {
+  font-family: "Playfair Display", serif;
+  background-color: #9A7B4F;
+  color: rgb(232, 214, 202);
+  border: none;
+  border-radius: 0.6em;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}

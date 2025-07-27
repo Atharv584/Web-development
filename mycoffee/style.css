@@ -1,0 +1,135 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+}
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.container{
+  height: 100vh;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 150px;
+  background-color: #4a2511;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+}
+.left-buttons, .right-button {
+  display: flex;
+  gap: 20px;
+}
+.title {
+  flex-grow: 1;
+  text-align: center;
+}
+.header-title {
+  font-family: "Press Start 2P", system-ui;
+  font-size: 3em;
+  color: rgb(232, 214, 202);
+  margin: 0;
+}
+.btn {
+  font-size: 1.3em;
+  font-family: "Playfair Display", serif;
+  width: 125px;
+  height: 75px;
+  color: rgb(232,214,202);
+  background-color: #9A7B4F;
+  border-radius: 0.8em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.bottom{
+  display: flex;
+  flex:1;
+}
+.left{
+  display: flex;
+  flex:12;
+  justify-content: center;
+  align-items: center;
+}
+.menu {
+  background-color: rgb(232,214,202);
+  padding: 30px;
+  border-radius: 1em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+  width: 600px;
+  max-width: 90%;
+  text-align: center;
+}
+.title_menu{
+  font-family: "Playfair Display", serif;
+  font-size: 3em;
+  height: 70px;
+  color: rgb(87, 45, 27);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pinktext{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+    /* justify-content: center; */
+  background-color: rgb(201,130,138);
+  color: rgb(228,210,198);
+  height: 30px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.7em;
+}
+.heads {
+  display: flex;
+  justify-content: space-between; /* aligns left/right spans */
+  align-items: center;
+  padding: 10px 20px;
+  height: 35px;
+  text-decoration: underline;
+  font-family: "Playfair Display", serif;
+  font-size: 1.4em;
+  color: rgb(201,130,138);
+  background-color: transparent; /* optional, if needed */
+}
+.items {
+  display: flex;
+  justify-content: space-between; /* aligns left/right spans */
+  align-items: center;
+  padding: 10px 20px;
+  height: 30px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.2em;
+  color: rgb(105, 54, 33);
+  background-color: transparent; /* optional, if needed */
+}
+
+.right{
+  display: flex;
+  flex:8;
+  justify-content: center;
+  align-items: center;
+}
+.right img {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+  border-radius: 1.5em;
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+}
+
+
