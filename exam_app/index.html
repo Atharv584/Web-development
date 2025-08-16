@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamTracker - Study Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    ExamTracker
+                </h1>
+                <div class="header-actions">
+                    <button class="btn btn-primary" id="addTaskBtn">
+                        <i class="fas fa-plus"></i>
+                        Add Task
+                    </button>
+                    <button class="btn btn-secondary" id="viewToggle">
+                        <i class="fas fa-calendar"></i>
+                        Calendar View
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <!-- Subject Tabs -->
+            <div class="subjects-container">
+                <div class="subjects-tabs" id="subjectsTabs">
+                    <button class="subject-tab active" data-subject="all">
+                        <i class="fas fa-list"></i>
+                        All Tasks
+                    </button>
+                </div>
+                <button class="add-subject-btn" id="addSubjectBtn">
+                    <i class="fas fa-plus"></i>
+                    Add Subject
+                </button>
+            </div>
+
+            <!-- Tasks View -->
+            <div class="tasks-view" id="tasksView">
+                <div class="tasks-header">
+                    <h2 id="currentSubjectTitle">All Tasks</h2>
+                    <div class="tasks-stats">
+                        <span class="stat">
+                            <i class="fas fa-tasks"></i>
+                            <span id="totalTasks">0</span> Total
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-clock"></i>
+                            <span id="pendingTasks">0</span> Pending
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-check-circle"></i>
+                            <span id="completedTasks">0</span> Completed
+                        </span>
+                    </div>
+                </div>
+
+                <div class="tasks-container" id="tasksContainer">
+                    <!-- Tasks will be dynamically inserted here -->
+                </div>
+            </div>
+
+            <!-- Calendar View -->
+            <div class="calendar-view hidden" id="calendarView">
+                <div class="calendar-header">
+                    <button class="calendar-nav" id="prevMonth">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h2 id="currentMonth"></h2>
+                    <button class="calendar-nav" id="nextMonth">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="calendar-grid" id="calendarGrid">
+                    <!-- Calendar will be dynamically generated -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add Task Modal -->
+    <div class="modal hidden" id="taskModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add New Task</h3>
+                <button class="modal-close" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="task-form" id="taskForm">
+                <div class="form-group">
+                    <label for="taskTitle">Task Title</label>
+                    <input type="text" id="taskTitle" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="taskSubject">Subject</label>
+                    <select id="taskSubject" required>
+                        <option value="">Select Subject</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="taskDescription">Description</label>
+                    <textarea id="taskDescription" rows="3"></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="taskDueDate">Due Date</label>
+                        <input type="date" id="taskDueDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="taskDueTime">Due Time</label>
+                        <input type="time" id="taskDueTime">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="taskPriority">Priority</label>
+                    <select id="taskPriority">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="taskReminder">
+                        Set Reminder (1 day before due date)
+                    </label>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelTask">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Subject Modal -->
+    <div class="modal hidden" id="subjectModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Subject</h3>
+                <button class="modal-close" id="closeSubjectModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="subject-form" id="subjectForm">
+                <div class="form-group">
+                    <label for="subjectName">Subject Name</label>
+                    <input type="text" id="subjectName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subjectColor">Color</label>
+                    <div class="color-picker">
+                        <input type="color" id="subjectColor" value="#3b82f6">
+                        <div class="color-presets">
+                            <button type="button" class="color-preset" data-color="#3b82f6"></button>
+                            <button type="button" class="color-preset" data-color="#ef4444"></button>
+                            <button type="button" class="color-preset" data-color="#10b981"></button>
+                            <button type="button" class="color-preset" data-color="#f59e0b"></button>
+                            <button type="button" class="color-preset" data-color="#8b5cf6"></button>
+                            <button type="button" class="color-preset" data-color="#ec4899"></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelSubject">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Subject</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
